@@ -21525,7 +21525,7 @@ public class EsbPackageImpl extends EPackageImpl implements EsbPackage {
 		initEAttribute(getNamespacedProperty_Dynamic(), ecorePackage.getEBoolean(), "dynamic", null, 0, 1, NamespacedProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enrichMediatorEClass, EnrichMediator.class, "EnrichMediator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEnrichMediator_CloneSource(), ecorePackage.getEBoolean(), "cloneSource", "false", 0, 1, EnrichMediator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEnrichMediator_CloneSource(), ecorePackage.getEBoolean(), "cloneSource", "true", 0, 1, EnrichMediator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEnrichMediator_SourceType(), this.getEnrichSourceType(), "sourceType", null, 0, 1, EnrichMediator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnrichMediator_SourceXpath(), this.getNamespacedProperty(), null, "sourceXpath", null, 0, 1, EnrichMediator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEnrichMediator_SourceProperty(), ecorePackage.getEString(), "sourceProperty", "source_property", 0, 1, EnrichMediator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -23660,6 +23660,7 @@ public class EsbPackageImpl extends EPackageImpl implements EsbPackage {
 		initEEnum(inboundEndpointBehaviourTypeEEnum, InboundEndpointBehaviourType.class, "InboundEndpointBehaviourType");
 		addEEnumLiteral(inboundEndpointBehaviourTypeEEnum, InboundEndpointBehaviourType.POLLING_INBOUND_ENDPOINT);
 		addEEnumLiteral(inboundEndpointBehaviourTypeEEnum, InboundEndpointBehaviourType.LISTENING_INBOUND_ENDPOINT);
+		addEEnumLiteral(inboundEndpointBehaviourTypeEEnum, InboundEndpointBehaviourType.EVENT_BASED_INBOUND_ENDPOINT);
 
 		initEEnum(contentTypeEEnum, ContentType.class, "ContentType");
 		addEEnumLiteral(contentTypeEEnum, ContentType.XML);
@@ -23738,7 +23739,6 @@ public class EsbPackageImpl extends EPackageImpl implements EsbPackage {
 
 		initEEnum(hashGeneratorEEnum, HashGenerator.class, "HashGenerator");
 		addEEnumLiteral(hashGeneratorEEnum, HashGenerator.CARBON_MEDIATOR_CACHE_DIGEST_DOMHASH_GENERATOR);
-		addEEnumLiteral(hashGeneratorEEnum, HashGenerator.CACHING_DIGEST_DOMHASH_GENERATOR);
 
 		// Initialize data types
 		initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
