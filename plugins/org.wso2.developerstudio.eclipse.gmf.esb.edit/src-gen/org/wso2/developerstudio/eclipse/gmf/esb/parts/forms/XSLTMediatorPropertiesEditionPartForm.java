@@ -1128,7 +1128,7 @@ public class XSLTMediatorPropertiesEditionPartForm extends SectionPropertiesEdit
             @Override
             public void mouseDown( MouseEvent event ) {
                 EEFNameSpacedPropertyEditorDialog nspd = new EEFNameSpacedPropertyEditorDialog(parent.getShell(), SWT.NULL, sourceXpath);
-                nspd.open();
+                sourceXpath = nspd.open();
                 sourceXpathText.setText(sourceXpath.getPropertyValue());
                 propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(XSLTMediatorPropertiesEditionPartForm.this, EsbViewsRepository.XSLTMediator.Properties.sourceXpath, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.SET, null, getSourceXpath()));
             }
@@ -1140,7 +1140,7 @@ public class XSLTMediatorPropertiesEditionPartForm extends SectionPropertiesEdit
             @Override
             public void keyPressed(KeyEvent e) {
                 EEFNameSpacedPropertyEditorDialog nspd = new EEFNameSpacedPropertyEditorDialog(parent.getShell(), SWT.NULL, sourceXpath);
-                nspd.open();
+                sourceXpath = nspd.open();
                 sourceXpathText.setText(sourceXpath.getPropertyValue());
                 propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(XSLTMediatorPropertiesEditionPartForm.this, EsbViewsRepository.XSLTMediator.Properties.sourceXpath, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.SET, null, getSourceXpath()));
             }
@@ -1180,7 +1180,7 @@ public class XSLTMediatorPropertiesEditionPartForm extends SectionPropertiesEdit
             @Override
             public void mouseDown( MouseEvent event ) {
                 EEFNameSpacedPropertyEditorDialog nspd = new EEFNameSpacedPropertyEditorDialog(parent.getShell(), SWT.NULL, dynamicSchema);
-                nspd.open();
+                dynamicSchema = nspd.open();
                 dynamicSchemaText.setText(dynamicSchema.getPropertyValue());
                 propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(XSLTMediatorPropertiesEditionPartForm.this, EsbViewsRepository.XSLTMediator.Properties.xSLTDynamicSchemaKey, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.SET, null, getXSLTDynamicSchemaKey()));
             }
@@ -1192,7 +1192,7 @@ public class XSLTMediatorPropertiesEditionPartForm extends SectionPropertiesEdit
             @Override
             public void keyPressed(KeyEvent e) {
                 EEFNameSpacedPropertyEditorDialog nspd = new EEFNameSpacedPropertyEditorDialog(parent.getShell(), SWT.NULL, dynamicSchema);
-                nspd.open();
+                dynamicSchema = nspd.open();
                 dynamicSchemaText.setText(dynamicSchema.getPropertyValue());
                 propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(XSLTMediatorPropertiesEditionPartForm.this, EsbViewsRepository.XSLTMediator.Properties.xSLTDynamicSchemaKey, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.SET, null, getXSLTDynamicSchemaKey()));
             }

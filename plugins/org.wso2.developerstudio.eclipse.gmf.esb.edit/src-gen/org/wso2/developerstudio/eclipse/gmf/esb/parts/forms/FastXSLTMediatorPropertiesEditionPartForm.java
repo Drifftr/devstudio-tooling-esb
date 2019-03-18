@@ -815,7 +815,7 @@ public class FastXSLTMediatorPropertiesEditionPartForm extends SectionProperties
         EEFNameSpacedPropertyEditorDialog nspd = new EEFNameSpacedPropertyEditorDialog(parent.getShell(),
                 SWT.NULL, fastXsltDynamicSchemaKey);
         // valueExpression.setPropertyValue(valueExpressionText.getText());
-        nspd.open();
+        fastXsltDynamicSchemaKey = nspd.open();
         dynamicSchemaKeyText.setText(fastXsltDynamicSchemaKey.getPropertyValue());
         propertiesEditionComponent.firePropertiesChanged(
                 new PropertiesEditionEvent(FastXSLTMediatorPropertiesEditionPartForm.this,
